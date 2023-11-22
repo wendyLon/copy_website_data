@@ -1,0 +1,20 @@
+name: Sync to Tampermonkey
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Tampermonkey CLI
+        run: npm install -g tampermonkey-cli
+
+      - name: Sync script to Tampermonkey
+        run: tampermonkey push --file Copy Website Data.user.js --apikey ${{ secrets.TAMPERMONKEY_API_KEY }}

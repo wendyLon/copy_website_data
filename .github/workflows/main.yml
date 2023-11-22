@@ -17,4 +17,4 @@ jobs:
         run: npm install -g tampermonkey-cli
 
       - name: Sync script to Tampermonkey
-        run: tampermonkey push --file Copy Website Data.user.js --apikey ${{ secrets.TAMPERMONKEY_API_KEY }}
+        run: tampermonkey push --file Copy\ Website\ Data.user.js --apikey ${{ secrets.TAMPERMONKEY_API_KEY }}

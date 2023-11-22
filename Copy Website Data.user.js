@@ -72,7 +72,7 @@
         successMessage.style.position = "relative";
         buttonContainer.append(successMessage);
 
-        // 3秒後隱藏Copy Success提示信息
+        // 3秒後隱藏Copy Success提示信息 test同步
         setTimeout(function() {
             successMessage.style.display = "none";
         }, 3000);
